@@ -14,7 +14,7 @@ form {
     background-color: rgba(43, 42, 35, 0.9);
     padding: 20px;
     border-radius: 12px;
-    border: 2px solid #6c4f3c; /* ขอบแบบสีไม้ */
+    border: 2px solid #6c4f3c;
     max-width: 600px;
     margin: 0 auto;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
@@ -22,9 +22,10 @@ form {
 
 h2 {
     text-align: center;
-    color: #b4a269;
+    color: #d7c4a5;
     margin-bottom: 30px;
     font-size: x-large;
+    font-weight: bold;
 }
 
 .Topic {
@@ -40,17 +41,37 @@ label {
     color: #d7c4a5;
 }
 
+::placeholder {
+    color: #e0d6c5;
+    opacity: 25%;
+}
+
+#choose {
+    color: #e0d6c5;
+    opacity: 25%;
+}
+
+input[type="checkbox"], input[type="radio"], input[type="date"], select[id="faculty"], ::-webkit-calendar-picker-indicator  {
+    cursor: pointer;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="date"],
 select {
-    width: 100%;
+    width: 97%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #6c4f3c;
     border-radius: 8px;
     background-color: #2e2a26;
     color: #e0d6c5;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #e0d6c5;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 input[type="checkbox"],
@@ -67,7 +88,6 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     width: 100%;
-    font-family: 'Cinzel', serif;
 }
 
 button[type="submit"]:hover {
@@ -93,3 +113,4 @@ span {
         font-size: 14px;
     }
 }
+

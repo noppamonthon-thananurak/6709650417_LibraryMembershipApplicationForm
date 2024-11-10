@@ -9,23 +9,23 @@
 <body>
     <h2>แบบฟอร์มสมัครสมาชิกห้องสมุด</h2>
     <form>
-        <label for="fullname-th" class="Topic">ชื่อ – นามสกุล (ภาษาไทย): <span style="color: red;">*</span></label><br>
-        <input type="text" id="fullname-th" name="fullname-th" required><br><br>
+        <label for="fullname-th" class="Topic">ชื่อ – นามสกุล (ภาษาไทย): <span style="color: red;">*</span></label><br><br>
+        <input type="text" id="fullname-th" name="fullname-th" placeholder="จำเป็นต้องกรอก" required><br><br>
 
-        <label for="fullname-en" class="Topic">Name – Surname (English): <span style="color: red;">*</span></label><br>
-        <input type="text" id="fullname-en" name="fullname-en" required><br><br>
+        <label for="fullname-en" class="Topic">Name – Surname (English): <span style="color: red;">*</span></label><br><br>
+        <input type="text" id="fullname-en" name="fullname-en" placeholder="จำเป็นต้องกรอก" required><br><br>
 
-        <label class="Topic">เพศ: <span style="color: red;">*</span></label><br>
+        <label class="Topic">เพศ: <span style="color: red;">*</span></label><br><br>
         <input type="radio" id="male" name="gender" value="ชาย" required>
         <label for="male">ชาย</label><br>
         <input type="radio" id="female" name="gender" value="หญิง">
         <label for="female">หญิง</label><br><br>
 
-        <label for="student-id" class="Topic">รหัสนักศึกษา: <span style="color: red;">*</span></label><br>
-        <input type="text" id="student-id" name="student-id" pattern="\d{10}" title="กรุณากรอกรหัสนักศึกษาจำนวน 10 หลัก" required><br><br>
+        <label for="student-id" class="Topic">รหัสนักศึกษา: <span style="color: red;">*</span></label><br><br>
+        <input type="text" id="student-id" name="student-id" pattern="\d{10}" title="กรุณากรอกรหัสนักศึกษาจำนวน 10 หลัก" placeholder="จำเป็นต้องกรอก" required><br><br>
 
-        <label for="faculty" class="Topic">คณะที่ศึกษา: <span style="color: red;">*</span></label><br>
-        <select id="faculty" name="faculty" required>
+        <label for="faculty" class="Topic">คณะที่ศึกษา: <span style="color: red;">*</span></label><br><br>
+        <select id="faculty" name="faculty" required style="width: 100.5%;">
             <option value="">-- โปรดเลือกคณะ --</option>
             <option value="คณะนิติศาสตร์">คณะนิติศาสตร์</option>
             <option value="คณะพาณิชยศาสตร์และการบัญชี">คณะพาณิชยศาสตร์และการบัญชี</option>
@@ -55,29 +55,43 @@
             <option value="วิทยาลัยแพทยศาสตร์นานาชาติจุฬาภรณ์">วิทยาลัยแพทยศาสตร์นานาชาติจุฬาภรณ์</option>
         </select><br><br>
 
-        <label for="email" class="Topic">ที่อยู่อีเมล: <span style="color: red;">*</span></label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email" class="Topic">ที่อยู่อีเมล: <span style="color: red;">*</span></label><br><br>
+        <input type="email" id="email" name="email" placeholder="จำเป็นต้องกรอก" required><br><br>
 
-        <label for="dob" class="Topic">วันเดือนปีเกิด: <span style="color: red;">*</span></label><br>
+        <label for="dob" class="Topic">วันเดือนปีเกิด: <span style="color: red;">*</span></label><br><br>
         <input type="date" id="dob" name="dob" required><br><br>
 
-        <label class="Topic">ประเภทของหนังสือที่สนใจ:</label><br>
+        <label class="Topic">ประเภทของหนังสือที่สนใจ:</label><br><br>
+        <input type="checkbox" id="Generalities" name="book-type" value="เบ็ตเตล็ดหรือความรู้ทั่วไป">
+        <label for="fiction">เบ็ตเตล็ดหรือความรู้ทั่วไป</label>
         <input type="checkbox" id="Fiction" name="book-type" value="นิยาย">
         <label for="fiction">นิยาย</label>
+        <input type="checkbox" id="Sci-fi" name="book-type" value="ไซไฟ">
+        <label for="fiction">ไซไฟ</label>
         <input type="checkbox" id="Literature" name="book-type" value="วรรณกรรม">
         <label for="technology">วรรณกรรม</label>
+        <input type="checkbox" id="Arts and recreatio" name="book-type" value="ศิลปกรรมและการบันเทิง">
+        <label for="fiction">ศิลปกรรมและการบันเทิง</label><br>
+        <input type="checkbox" id="Language" name="book-type" value="ภาษา">
+        <label for="fiction">ภาษา</label>
+        <input type="checkbox" id="Documentary" name="book-type" value="สารคดี">
+        <label for="fiction">สารคดี</label>
         <input type="checkbox" id="Science" name="book-type" value="วิทยาศาสตร์">
         <label for="science">วิทยาศาสตร์</label>
         <input type="checkbox" id="History" name="book-type" value="ประวัติศาสตร์">
         <label for="history">ประวัติศาสตร์</label>
+        <input type="checkbox" id="Geography" name="book-type" value="ภูมิศาสตร์">
+        <label for="history">ภูมิศาสตร์</label>
         <input type="checkbox" id="Technology" name="book-type" value="เทคโนโลยี">
-        <label for="technology">เทคโนโลยี</label>
+        <label for="technology">เทคโนโลยี</label><br>
+        <input type="checkbox" id="Computers and programs" name="book-type" value="คอมพิวเตอร์และโปรแกรม">
+        <label for="technology">คอมพิวเตอร์และโปรแกรม</label> 
         <input type="checkbox" id="Education and learning" name="book-type" value="การศึกษาและการเรียนรู้">
         <label for="technology">การศึกษาและการเรียนรู้</label>
         <input type="checkbox" id="Business and Finance" name="book-type" value="ธุรกิจและการเงิน">
         <label for="technology">ธุรกิจและการเงิน</label>
         <input type="checkbox" id="Philosophy" name="book-type" value="ปรัชญา">
-        <label for="technology">ปรัชญา</label>
+        <label for="technology">ปรัชญา</label><br>
         <input type="checkbox" id="Religion" name="book-type" value="ศาสนา">
         <label for="technology">ศาสนา</label>
         <input type="checkbox" id="Health and care" name="book-type" value="สุขภาพและการดูแลรักษา">
@@ -86,9 +100,9 @@
 
         <br><br><br>
 
-        <label class="Topic">ความต้องการที่จะรับข่าวสารข้อมูลของห้องสมุดทางอีเมล:</label><br><br> 
+        <label class="Topic">รับข่าวสารข้อมูลของห้องสมุดทางอีเมล: <span style="color: red;">*</span></label><br><br> 
         <input type="radio" id="accept" name="receive" value="yes" required>
-        <label for="accept">ฉันต้องการรับข่าวสาร</label>
+        <label for="accept">ฉันต้องการรับข่าวสาร</label><br>
         <input type="radio" id="deny" name="receive" value="no">
         <label for="deny">ฉันไม่ต้องการรับข่าวสาร</label>        
 
