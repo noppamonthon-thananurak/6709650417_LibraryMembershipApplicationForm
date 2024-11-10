@@ -1,1 +1,100 @@
-q
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มสมัครสมาชิกห้องสมุด</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <h2>แบบฟอร์มสมัครสมาชิกห้องสมุด</h2>
+    <form>
+        <label for="fullname-th" class="Topic">ชื่อ – นามสกุล (ภาษาไทย): <span style="color: red;">*</span></label><br>
+        <input type="text" id="fullname-th" name="fullname-th" required><br><br>
+
+        <label for="fullname-en" class="Topic">Name – Surname (English): <span style="color: red;">*</span></label><br>
+        <input type="text" id="fullname-en" name="fullname-en" required><br><br>
+
+        <label class="Topic">เพศ: <span style="color: red;">*</span></label><br>
+        <input type="radio" id="male" name="gender" value="ชาย" required>
+        <label for="male">ชาย</label><br>
+        <input type="radio" id="female" name="gender" value="หญิง">
+        <label for="female">หญิง</label><br><br>
+
+        <label for="student-id" class="Topic">รหัสนักศึกษา: <span style="color: red;">*</span></label><br>
+        <input type="text" id="student-id" name="student-id" pattern="\d{10}" title="กรุณากรอกรหัสนักศึกษาจำนวน 10 หลัก" required><br><br>
+
+        <label for="faculty" class="Topic">คณะที่ศึกษา: <span style="color: red;">*</span></label><br>
+        <select id="faculty" name="faculty" required>
+            <option value="">-- โปรดเลือกคณะ --</option>
+            <option value="คณะนิติศาสตร์">คณะนิติศาสตร์</option>
+            <option value="คณะพาณิชยศาสตร์และการบัญชี">คณะพาณิชยศาสตร์และการบัญชี</option>
+            <option value="คณะรัฐศาสตร์">คณะรัฐศาสตร์</option>
+            <option value="คณะเศรษฐศาสตร์">คณะเศรษฐศาสตร์</option>
+            <option value="คณะสังคมสงเคราะห์ศาสตร์">คณะสังคมสงเคราะห์ศาสตร์</option>
+            <option value="คณะสังคมวิทยาและมานุษยวิทยา">คณะสังคมวิทยาและมานุษยวิทยา</option>
+            <option value="คณะศิลปศาสตร์">คณะศิลปศาสตร์</option>
+            <option value="คณะวารสารศาสตร์และสื่อสารมวลชน">คณะวารสารศาสตร์และสื่อสารมวลชน</option>
+            <option value="คณะวิทยาศาสตร์และเทคโนโลยี">คณะวิทยาศาสตร์และเทคโนโลยี</option>
+            <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
+            <option value="คณะสถาปัตยกรรมศาสตร์และการผังเมือง">คณะสถาปัตยกรรมศาสตร์และการผังเมือง</option>
+            <option value="คณะศิลปกรรมศาสตร์">คณะศิลปกรรมศาสตร์</option>
+            <option value="คณะแพทยศาสตร์">คณะแพทยศาสตร์</option>
+            <option value="คณะสหเวชศาสตร์">คณะสหเวชศาสตร์</option>
+            <option value="คณะทันตแพทยศาสตร์">คณะทันตแพทยศาสตร์</option>
+            <option value="คณะพยาบาลศาสตร์">คณะพยาบาลศาสตร์</option>
+            <option value="คณะสาธารณสุขศาสตร์">คณะสาธารณสุขศาสตร์</option>
+            <option value="คณะเภสัชศาสตร์">คณะเภสัชศาสตร์</option>
+            <option value="คณะวิทยาการเรียนรู้และศึกษาศาสตร์">คณะวิทยาการเรียนรู้และศึกษาศาสตร์</option>
+            <option value="วิทยาลัยพัฒนศาสตร์ ป๋วย อึ๊งภากรณ์">วิทยาลัยพัฒนศาสตร์ ป๋วย อึ๊งภากรณ์</option>
+            <option value="วิทยาลัยนวัตกรรม">วิทยาลัยนวัตกรรม</option>
+            <option value="วิทยาลัยสหวิทยาการ">วิทยาลัยสหวิทยาการ</option>
+            <option value="วิทยาลัยโลกคดีศึกษา">วิทยาลัยโลกคดีศึกษา</option>
+            <option value="สถาบันเทคโนโลยีนานาชาติสิรินธร">สถาบันเทคโนโลยีนานาชาติสิรินธร</option>
+            <option value="วิทยาลัยนานาชาติ ปรีดี พนมยงค์">วิทยาลัยนานาชาติ ปรีดี พนมยงค์</option>
+            <option value="วิทยาลัยแพทยศาสตร์นานาชาติจุฬาภรณ์">วิทยาลัยแพทยศาสตร์นานาชาติจุฬาภรณ์</option>
+        </select><br><br>
+
+        <label for="email" class="Topic">ที่อยู่อีเมล: <span style="color: red;">*</span></label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="dob" class="Topic">วันเดือนปีเกิด: <span style="color: red;">*</span></label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label class="Topic">ประเภทของหนังสือที่สนใจ:</label><br>
+        <input type="checkbox" id="Fiction" name="book-type" value="นิยาย">
+        <label for="fiction">นิยาย</label>
+        <input type="checkbox" id="Literature" name="book-type" value="วรรณกรรม">
+        <label for="technology">วรรณกรรม</label>
+        <input type="checkbox" id="Science" name="book-type" value="วิทยาศาสตร์">
+        <label for="science">วิทยาศาสตร์</label>
+        <input type="checkbox" id="History" name="book-type" value="ประวัติศาสตร์">
+        <label for="history">ประวัติศาสตร์</label>
+        <input type="checkbox" id="Technology" name="book-type" value="เทคโนโลยี">
+        <label for="technology">เทคโนโลยี</label>
+        <input type="checkbox" id="Education and learning" name="book-type" value="การศึกษาและการเรียนรู้">
+        <label for="technology">การศึกษาและการเรียนรู้</label>
+        <input type="checkbox" id="Business and Finance" name="book-type" value="ธุรกิจและการเงิน">
+        <label for="technology">ธุรกิจและการเงิน</label>
+        <input type="checkbox" id="Philosophy" name="book-type" value="ปรัชญา">
+        <label for="technology">ปรัชญา</label>
+        <input type="checkbox" id="Religion" name="book-type" value="ศาสนา">
+        <label for="technology">ศาสนา</label>
+        <input type="checkbox" id="Health and care" name="book-type" value="สุขภาพและการดูแลรักษา">
+        <label for="technology">สุขภาพและการดูแลรักษา</label>
+
+
+        <br><br><br>
+
+        <label class="Topic">ความต้องการที่จะรับข่าวสารข้อมูลของห้องสมุดทางอีเมล:</label><br><br> 
+        <input type="radio" id="accept" name="receive" value="yes" required>
+        <label for="accept">ฉันต้องการรับข่าวสาร</label>
+        <input type="radio" id="deny" name="receive" value="no">
+        <label for="deny">ฉันไม่ต้องการรับข่าวสาร</label>        
+
+        <br><br><br><br>
+
+        <button type="submit">สมัครสมาชิก</button>
+    </form>
+</body>
+</html>
